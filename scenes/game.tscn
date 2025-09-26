@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=4 uid="uid://dj4h63jni4338"]
+[gd_scene load_steps=17 format=4 uid="uid://dj4h63jni4338"]
 
 [ext_resource type="Script" uid="uid://xb4l32frqyop" path="res://script/world.gd" id="1_lbhrr"]
 [ext_resource type="Texture2D" uid="uid://cvbvcydxh0buo" path="res://assets/tilemap/Uncut_Tilemap.png" id="1_yqjtg"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://cnj3qxi36kwg5" path="res://assets/sprite/new-game.png" id="8_gee14"]
 [ext_resource type="Texture2D" uid="uid://cua0p0sb8x8qs" path="res://assets/sprite/menu-screen.png" id="8_vtaks"]
 [ext_resource type="Script" uid="uid://b7xk7hc7m8y34" path="res://scenes/area_2d.gd" id="10_vtaks"]
+[ext_resource type="PackedScene" uid="uid://bam22o04oi7ed" path="res://scenes/kill_z_one.tscn" id="11_kvpfn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lbhrr"]
 texture = ExtResource("1_yqjtg")
@@ -455,10 +456,10 @@ metadata/_edit_vertical_guides_ = [778.0]
 metadata/_edit_horizontal_guides_ = [-87.0]
 
 [node name="ColorRect" type="ColorRect" parent="."]
-offset_left = -6329.0
-offset_top = -4941.0
-offset_right = 7833.0
-offset_bottom = 5239.0
+offset_left = -5795.0
+offset_top = -4790.0
+offset_right = 8367.0
+offset_bottom = 5390.0
 color = Color(0.07450981, 0, 0.09411765, 1)
 
 [node name="UNCUT" type="TileMapLayer" parent="."]
@@ -621,6 +622,19 @@ offset_bottom = -1239.0
 theme_override_colors/font_color = Color(1, 0.023774136, 0.3390503, 1)
 text = "Congrats  On 
 Completing"
+
+[node name="Kill ZOne" parent="." instance=ExtResource("11_kvpfn")]
+position = Vector2(-549, 298)
+scale = Vector2(1.0328298, 0.436065)
+
+[node name="Kill ZOne3" parent="." instance=ExtResource("11_kvpfn")]
+position = Vector2(-658.0001, 682)
+rotation = -1.5655639
+scale = Vector2(1.0048703, 0.44813335)
+
+[node name="Kill ZOne2" parent="." instance=ExtResource("11_kvpfn")]
+position = Vector2(-546, -498.00003)
+scale = Vector2(1.0328298, 0.436065)
 
 [connection signal="pressed" from="Mainmenu/HBoxContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/New Game" to="Mainmenu" method="_on_new_game_pressed"]
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

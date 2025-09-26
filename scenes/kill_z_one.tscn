@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bam22o04oi7ed"]
+
+[ext_resource type="Script" uid="uid://b741hcmtmbfma" path="res://script/kill_z_one.gd" id="1_uyvkd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5eywi"]
+size = Vector2(1277, 667)
+
+[node name="Kill ZOne" type="Area2D"]
+script = ExtResource("1_uyvkd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(628.5, 323.5)
+shape = SubResource("RectangleShape2D_5eywi")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
