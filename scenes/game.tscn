@@ -456,10 +456,10 @@ metadata/_edit_vertical_guides_ = [778.0]
 metadata/_edit_horizontal_guides_ = [-87.0]
 
 [node name="ColorRect" type="ColorRect" parent="."]
-offset_left = -5795.0
-offset_top = -4790.0
-offset_right = 8367.0
-offset_bottom = 5390.0
+offset_left = -6310.0
+offset_top = -4758.0
+offset_right = 7852.0
+offset_bottom = 5422.0
 color = Color(0.07450981, 0, 0.09411765, 1)
 
 [node name="UNCUT" type="TileMapLayer" parent="."]
@@ -596,10 +596,15 @@ texture_filter = 1
 texture_repeat = 2
 layout_mode = 2
 theme_override_font_sizes/font_size = 12
-text = "Credits
-    Piyush
-    Sashank
-    Avinav"
+text = "Credits: Piyush | Sashank | Avinav"
+
+[node name="Credits2" type="Label" parent="Mainmenu/HBoxContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer"]
+texture_filter = 1
+texture_repeat = 2
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "Controls: Arrow (Left | Right) 
+                  for Gravity"
 
 [node name="Panorama" type="TextureRect" parent="Mainmenu/HBoxContainer"]
 layout_mode = 2
