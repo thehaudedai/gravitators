@@ -3,6 +3,9 @@
 [ext_resource type="Texture2D" uid="uid://cvbvcydxh0buo" path="res://assets/tilemap/Uncut_Tilemap.png" id="1_a175l"]
 [ext_resource type="Script" uid="uid://s8v4imtndp22" path="res://script/tekeport.gd" id="1_sgii7"]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_ohrlm"]
+radius = 11.0
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_sgii7"]
 atlas = ExtResource("1_a175l")
 region = Rect2(112, 224, 28, 32)
@@ -25,20 +28,17 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_ohrlm"]
-radius = 11.0
-
 [node name="tekeport" type="Area2D" groups=["Player"]]
 script = ExtResource("1_sgii7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-3, -1)
+shape = SubResource("CircleShape2D_ohrlm")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-2, -1)
 sprite_frames = SubResource("SpriteFrames_aolh5")
-frame_progress = 0.26985273
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -2)
-shape = SubResource("CircleShape2D_ohrlm")
+frame_progress = 0.44748476
 
 [node name="Destination" type="Marker2D" parent="."]
 position = Vector2(-32, 0)
