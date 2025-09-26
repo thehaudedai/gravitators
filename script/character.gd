@@ -1,25 +1,23 @@
 extends CharacterBody2D
 
+# Gravity direction - default is DOWN
+var gravity_direction := Vector2.DOWN
 
-const SPEED = 300.0
-const JUMP_VELOCITY = -400.0
+# Speed at which the character falls due to gravity
+const GRAVITY_SPEED := 300.0
 
-
-func _physics_process(delta: float) -> void:
-	# Add the gravity.
-	if not is_on_floor():
-		velocity += get_gravity() * delta
-
-	# Handle jump.
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
-
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
-	var direction := Input.get_axis("ui_left", "ui_right")
-	if direction:
-		velocity.x = direction * SPEED
-	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-
+func _physics_process(_delta: float) -> void:
+	# Move the character in the direction of gravity
+	velocity = gravity_direction * GRAVITY_SPEED
 	move_and_slide()
+
+func _input(event):
+	# Change gravity direction based on key input
+	if event.is_action_pressed("gravity_up"):
+		gravity_direction = Vector2.UP
+	elif event.is_action_pressed("gravity_down"):
+		gravity_direction = Vector2.DOWN
+	elif event.is_action_pressed("gravity_left"):
+		gravity_direction = Vector2.LEFT
+	elif event.is_action_pressed("gravity_right"):
+		gravity_direction = Vector2.RIGHT
