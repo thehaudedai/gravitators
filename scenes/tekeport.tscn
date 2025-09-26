@@ -28,14 +28,19 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_ohrlm"]
 radius = 11.0
 
-[node name="tekeport" type="Area2D"]
+[node name="tekeport" type="Area2D" groups=["Player"]]
 script = ExtResource("1_sgii7")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-2, -1)
 sprite_frames = SubResource("SpriteFrames_aolh5")
-frame_progress = 0.48789433
+frame_progress = 0.26985273
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -2)
 shape = SubResource("CircleShape2D_ohrlm")
+
+[node name="Destination" type="Marker2D" parent="."]
+position = Vector2(-32, 0)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

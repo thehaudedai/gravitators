@@ -451,7 +451,9 @@ scale = Vector2(0.34, 0.34)
 zoom = Vector2(4, 4)
 
 [node name="tekeport" parent="." instance=ExtResource("3_lnu2h")]
-position = Vector2(1090, -80)
+position = Vector2(907, -70)
 
-[node name="tekeport2" parent="." instance=ExtResource("3_lnu2h")]
-position = Vector2(901, -68)
+[node name="Destination" parent="tekeport" index="2" groups=["Player"]]
+position = Vector2(-130, -8)
+
+[editable path="tekeport"]
