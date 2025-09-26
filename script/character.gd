@@ -17,3 +17,7 @@ func _physics_process(delta):
 
 	# Keep player upright
 	rotation = -get_parent().rotation
+
+
+func teleport():
+	pass
