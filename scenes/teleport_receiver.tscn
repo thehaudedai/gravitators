@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://bqs4l1kpueu4b"]
+
+[ext_resource type="Texture2D" uid="uid://cvbvcydxh0buo" path="res://assets/tilemap/Uncut_Tilemap.png" id="1_js23w"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5g58h"]
+atlas = ExtResource("1_js23w")
+region = Rect2(144, 288, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mgqnm"]
+atlas = ExtResource("1_js23w")
+region = Rect2(160, 288, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_juaaw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5g58h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mgqnm")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="TeleportReceiver" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_juaaw")
+frame_progress = 0.5198696

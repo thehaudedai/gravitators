@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=4 uid="uid://dj4h63jni4338"]
 
-[ext_resource type="Script" path="res://script/world.gd" id="1_lbhrr"]
+[ext_resource type="Script" uid="uid://xb4l32frqyop" path="res://script/world.gd" id="1_lbhrr"]
 [ext_resource type="Texture2D" uid="uid://cvbvcydxh0buo" path="res://assets/tilemap/Uncut_Tilemap.png" id="1_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://bvt0mh6vmd8fc" path="res://scenes/tekeport.tscn" id="3_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://cglc13l5a41cx" path="res://scenes/character.tscn" id="4_lbhrr"]
