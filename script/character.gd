@@ -13,7 +13,7 @@ func _physics_process(delta):
 	if is_on_floor():
 		anim.play("idle")
 	else:
-		anim.play("fall")
+		anim.play("falling")
 
 	# Keep player upright
 	rotation = -get_parent().rotation

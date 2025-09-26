@@ -87,9 +87,9 @@ zoom = Vector2(2, 2)
 position = Vector2(0, -2.0000002)
 scale = Vector2(1.25, 1.25)
 sprite_frames = SubResource("SpriteFrames_lrhn5")
-animation = &"idle"
+animation = &"falling"
 autoplay = "idle"
-frame_progress = 0.0137340985
+frame_progress = 0.8994429
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 3)
