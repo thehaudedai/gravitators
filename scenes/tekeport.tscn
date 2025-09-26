@@ -1,0 +1,41 @@
+[gd_scene load_steps=7 format=3 uid="uid://bvt0mh6vmd8fc"]
+
+[ext_resource type="Texture2D" uid="uid://cvbvcydxh0buo" path="res://assets/tilemap/Uncut_Tilemap.png" id="1_a175l"]
+[ext_resource type="Script" uid="uid://s8v4imtndp22" path="res://script/tekeport.gd" id="1_sgii7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sgii7"]
+atlas = ExtResource("1_a175l")
+region = Rect2(112, 224, 28, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ylodb"]
+atlas = ExtResource("1_a175l")
+region = Rect2(112, 256, 28, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_aolh5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sgii7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ylodb")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ohrlm"]
+radius = 11.0
+
+[node name="tekeport" type="Area2D"]
+script = ExtResource("1_sgii7")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-2, -1)
+sprite_frames = SubResource("SpriteFrames_aolh5")
+frame_progress = 0.48789433
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -2)
+shape = SubResource("CircleShape2D_ohrlm")
